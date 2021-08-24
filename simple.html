@@ -1,0 +1,222 @@
+<html>
+    <head></head>
+        <body>
+            <input type="button" value="primeornotprime" onclick="f1()"><br><br>
+            <input type="button" value="evenodd" onclick="f2()"><br><br>
+            <input type="button" value="compositeornot" onclick="f3()"><br><br>
+            <input type="button" value="perfactnumber" onclick="f4()"><br><br>
+            <input type="button" value="factorialnumber" onclick="f5()"><br><br>
+            <input type="button" value="sumofdigit" onclick="f6()"><br><br>
+            <input type="button" value="avragenumber" onclick="f7()"><br><br>
+            <input type="button" value="armstome" onclick="f10()"><br><br>
+            <input type="button" value="leapyear" onclick="f11()"><br><br>
+            <input type="button" value="palidrom" onclick="f12()"><br><br>
+            <input type="button" value="swaping2variable" onclick="f13()"><br><br>
+            <input type="button" value="swaping3variable" onclick="f14()"><br><br>
+            
+            <script>
+                function f1()
+                {
+                    var num=prompt("enter any number")
+                    var count=0;
+                    for(var i=1;i<=num;i++){
+                    if(num%i==0)count++
+                }
+                if(count==2)
+                document.write(num+"is a prime no")
+                else
+                document.write(num+"is not a prime number")
+            }
+            function f2()
+            {
+                var num=prompt("enter any no")
+               if(num%2==0)
+                {
+                   document.write(num+"is even number")}
+                   else{
+                       document.write(num+"is odd number")
+
+                   }
+               }
+               function f3()
+               {
+                   var count=0;
+                   var num=prompt("enter any no")
+                   for(var i=1;i<num;i++)
+                   {
+                       if(num%i==0)count++;
+                   }
+                   if(count>2)
+                   document.write(num+"is a not composate number")
+                   else
+                   document.write(num+"is a   composite no")
+
+               }
+               function f4()
+               {
+                   var total=0;
+                   var num=prompt("enter any no")
+                   for(var i=1;i<num;i++)
+                   {
+                       if(num%i==0)
+                       total=total+i
+                   }
+                   if(total==num)
+                   document.write(num+"is a perfect number")
+                   else
+                   document.write(num+"is not a perfect number")
+               }
+               function f5()
+               {
+                   var num=prompt("enter any number")
+                   var fact=1;
+                   for(var i=1;i<=num;i++)
+                   {
+                       fact=fact*i
+                   }
+                   document.write(fact)
+               }
+               function f6()
+               {
+                   var num=prompt("enter any number")
+                   var total=0;
+                   while(num!=0)
+                   {
+                       total+=num%10;
+                       num=parseInt(num/10)
+                   }
+                   document.write(total)
+
+               }
+               function f7()
+               {
+                   var num=prompt("enter any number")
+                   var total=0;
+                   while(num!=0)
+                   {
+                       total+=num%10;
+                       num=parseInt(num/10)
+                   }
+                   document.write(total/3)
+
+               }
+               function f13()
+               {
+                   var a=45;
+                   var b=85;
+                   
+                   [a,b]=[b,a]
+                   document.write(" after swap a is "+a  +"b is"+b)
+               }
+               function f14()
+               {
+                   var a=45;
+                   var b=85;
+                   var c=0;
+                   c=a;
+                   a=b;
+                   b=c;
+
+                   document.write(" after swap a is "+a  +"b is"+b)
+               }
+               function f12()
+               {
+                    var num=prompt("enter any number");
+                    var copynum=num;
+                    var reverse=0;
+                    while(copynum!=0)
+                    {
+                        reverse=reverse*10;
+                        reverse=reverse+(copynum%10)
+                        copynum=Math.floor(copynum/10)
+                    }
+                if(num==reverse)
+                {
+                    document.write(num+"is a palidrom")
+                }
+                else
+                {
+                    document.write(num+"is not a palidrom number")
+                }
+
+
+               }
+               function f10()
+               {
+                  num=prompt("enter any number")
+                  var copyNum=num;
+                  var remainder=0;
+                  var total=0;
+                  while(copynum!=0)
+                  {
+                    digits++;
+ copyNum = Math.floor(copyNum / 10);
+
+                  }
+               }
+                  
+
+while(copyNum != 0)
+{
+ digits++;
+ copyNum = Math.floor(copyNum / 10);
+}
+copyNum = num;
+
+//slice the numbers from last digits
+while(copyNum != 0)
+{
+ remainder = copyNum % 10;
+ total += Math.pow(remainder, digits);
+ copyNum = Math.floor(copyNum / 10);
+}
+// result
+if(num == total) 
+ document.write(num +" is an armstrong number");
+else
+ document.write(num +" is not an armstrong number");
+ 
+
+
+ function f11()
+               {
+                   num=prompt("enter any num")
+                  if(num%4==0)
+                  {
+                      if((num%400==0)||(num%100!=0))
+
+                     document.write(num+"is a leapyear")
+               }
+               else{
+                   document.write(num+"is not a leapyear")
+               }
+            }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+               
+                       
+            
+
+                
+            </script>
+        </body>
+    
+</html>
